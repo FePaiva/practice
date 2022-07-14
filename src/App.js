@@ -21,15 +21,12 @@ function App() {
 
     // the below saves the local storage inside the useEffect, passing items as current state
     localStorage.setItem('shoppinglist', JSON.stringify(items));
-
-
   }, [items])
 
-  // transferring the localStorageto the useEffect above. Converting all the setAndSaveItems in other functions to setItems(listItems). We can then remove this entire function.
+  // transferring the localStorage to the useEffect above. Converting all the setAndSaveItems in other functions to setItems(listItems). We can then remove this entire function.
   // const setAndSaveItems = (newItems) => {
   //   setItems(newItems);
   //   localStorage.setItem('shoppinglist', JSON.stringify(newItems));
-
   // }
 
   const addItem = (item) => {
